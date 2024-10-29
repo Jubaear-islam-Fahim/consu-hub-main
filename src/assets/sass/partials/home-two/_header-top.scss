@@ -1,0 +1,79 @@
+/* ============================
+    03.01 header-top css 
+=============================== */
+.header-top-area {
+    background: hsl(var(--two-header-color));
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    @media (max-width: 991.98px){
+        display: none;
+    }
+    .header-top-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-top-right-address {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .top-adders-contents {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        position: relative;
+
+        .header-add-lien {   
+            width: 1px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.19); 
+        }
+
+        .adders-content {
+            display: flex;
+            gap: 10px;
+
+            i {
+                background: rgba(255, 255, 255, 0.19); 
+                width: 50px;
+                height: 50px;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: hsl(var(--white));
+            }
+            .fs-16{
+                color: hsl(var(--gray4));
+            }
+        }
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        a {
+            background: rgba(255, 255, 255, 0.10);
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray3);
+            transition: all .2s linear;
+            font-size: 14px;
+
+            &:hover {
+                background: hsl(var(--primary));
+                color: hsl(var(--white));
+                font-size: 14px;
+            }
+        }
+    }
+}

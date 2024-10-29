@@ -1,0 +1,101 @@
+/* ============================
+    03.04 who-we css 
+=============================== */
+.home-two-who-we-area {
+    .who-we-img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+ 
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .img-item {
+            text-align: center;
+
+            &:nth-child(1) {
+                img {
+                    &:nth-child(1) {
+                        border-radius: 600px 600px 0px 0px;
+                    }
+
+                    &:nth-child(2) {
+                        width: auto;
+                        margin: 40px auto 0;
+                        animation: alltuchtopdown 3500ms ease-out infinite;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                margin-top: 40px;
+                text-align: left;
+
+                img {
+                    &:nth-child(1) {
+                        border-radius: 600px;
+                        max-width: 218px;
+                        max-height: 219px;
+                    }
+
+                    &:nth-child(2) {
+                        border-radius: 0px 0px 600px 600px;
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+
+        .content-item {
+            background: hsl(var(--white));
+            padding: 0px 30px 30px;
+            border-radius: 8px;
+            margin-top: 15px;
+
+            .icon {
+                background: hsl(var(--primary));
+                display: inline-block;
+                border-radius: 0px 0px 100px 100px;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -15px;
+                position: relative;
+                z-index: 1;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -11px;
+                    width: 11px;
+                    height: 17px;
+                    background: #1153C9;
+                    clip-path: polygon(0 1%, 100% 100%, 0% 100%);
+                }
+            }
+        }
+        .who-list{
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            li{
+                i{
+                    color: hsl(var(--primary));
+                }
+                color: hsl(var(--secondary));
+            }
+        }
+    }
+}

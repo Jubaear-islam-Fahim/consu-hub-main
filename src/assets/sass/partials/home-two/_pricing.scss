@@ -1,0 +1,120 @@
+/* ============================
+    03.08 pricing css
+=============================== */
+.home-two-pricing-area{ 
+
+    .project-nav {
+        display: flex;
+        border-radius: 30px;
+        background: #F8FBFF;
+        justify-content: center;
+        max-width: 258.031px;
+        margin: 50px auto;
+
+        button {
+            font-size: 20px;
+            color: hsl(var(--gray3));
+            font-weight: 500;
+            border-radius: 32.912px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            &.active {
+                background: hsl(var(--white));
+                box-shadow: 0px 6.582px 26.33px 0px rgba(18, 2, 47, 0.10);
+                color: hsl(var(--secondary));
+
+            }
+        }
+
+    }
+
+    .pricing-item {
+        border-radius: 12px;
+        background: hsl(var(--white));
+        padding: 40px 30px;
+
+        .title {
+            text-align: center;
+
+            .fs-20 {
+                color: hsl(var(--secondary));
+                padding: 15px 0 5px;
+            }
+
+            p {
+                color: hsl(var(--gray3));
+            }
+        }
+
+        .price {
+            border-radius: 12px;
+            background: #D8E5FE;
+            font-family: "Fraunces";
+            padding: 5px 30px;
+            font-size: 30px;
+            font-weight: 700;
+            color: hsl(var(--primary));
+            text-align: center;
+
+            .per-month {
+                font-size: 25px;
+            }
+        }
+
+        .list-unstyled {
+            display: grid;
+            gap: 10px;
+            margin: 30px 0;
+
+            li {
+                position: relative;
+                display: flex;
+                align-items: center;
+                color: hsl(var(--gray3));
+                gap: 10px;
+
+                &::before {
+                    content: "\f111";
+                    font-weight: 900;
+                    font-family: "Font Awesome 6 free";
+                    font-size: 5px;
+
+                }
+
+                &::after {
+                    content: "\f00c";
+                    font-weight: 900;
+                    font-family: "Font Awesome 6 free";
+                    font-size: 15px;
+                    margin-left: auto;
+                    color: hsl(var(--success));
+                }
+
+                &.list-erro {
+                    &::after {
+                        content: "\f00d";
+                        color: hsl(var(--error));
+                    }
+                }
+            }
+        }
+
+        .pricing-btn {
+            border: 1px solid hsl(var(--gray4));
+            border-radius: 4px;
+            padding: 12px 20px;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+            color: hsl(var(--gray3));
+            width: 100%;
+            text-align: center;
+            &:hover{
+                background: hsl(var(--primary));
+                color: hsl(var(--white))
+            }
+        }
+
+    }
+}

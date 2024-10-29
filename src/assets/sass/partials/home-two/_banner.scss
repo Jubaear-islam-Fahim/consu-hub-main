@@ -1,0 +1,124 @@
+/* ============================
+    03.03 banner css 
+=============================== */
+.home-two-banner{
+    background-image: url("../images/home-two/banner-bg.png");
+    @include bgp; 
+    background-color: hsl(var(--two-section));
+    .content{
+        h1{
+            color: hsl(var(--white));
+            font-size: 75px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        p{
+            color: #E8E8E9;
+            padding: 15px 0 35px;
+        }
+        .banner-btn{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .get-started-btn{
+            @include btn-min;
+            background: hsl(var(--primary));
+        }
+    }
+    .banner-right{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 70px 0;
+        .banner-img-item{
+            // display: grid;
+            gap: 24px;
+            img{ 
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                &:nth-child(2){
+                    margin-top: 24px; 
+                }
+            }
+            .alltuchtopdown-shape{
+                animation: alltuchtopdown 3500ms ease-out infinite;
+                margin-left: -20px;
+                margin-top: 40px;
+            }
+            .round-shape{
+                animation: rotatedHalf 4500ms ease-out infinite;
+                margin-left: -20px;
+            }
+            
+            &:nth-child(1){
+                margin-top: 60px;
+                .image-b{
+                    border-radius: 0px 0px 200px 200px;
+                }
+                 
+            }
+            &:nth-child(2){
+                margin-top: 30px;
+                .image-b{
+                    border-radius: 200px 200px 0px 0px;
+                    &:last-child{
+                        border-radius: 0px 0px 200px 200px;
+                        transform: translateX(-20px);
+                    }
+                }
+            }
+            &:nth-child(3){
+                .image-b{
+                    border-radius: 0px 0px 200px 200px;
+                    
+                }
+            }
+        }
+    }
+}
+
+.video-play-btn{ 
+    z-index: 10;  
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    display: block;
+    transition: .5s;
+    position: relative;
+    &::before, &::after{
+        content: "";
+        position: absolute; 
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: hsl(var(--primary));
+        border-radius: 50%;
+    }
+    &::before { 
+        z-index: 0;  
+        -webkit-animation: pulse-border 1500ms ease-out infinite;
+        animation: pulse-border 1500ms ease-out infinite;
+    }
+    &:after { 
+        z-index: 1;   
+        -webkit-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms; 
+    }
+    i {
+        display: block;
+        position: relative;
+        z-index: 3; 
+        color: hsl(var(--white));
+    }
+     
+    
+
+}
+

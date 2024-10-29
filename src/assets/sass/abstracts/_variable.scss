@@ -56,15 +56,20 @@
   @include colorVariable(--warning, #E2B93B, 5); 
   /* Info Color */
   @include colorVariable(--info, #024ED8, 5); 
-  @include colorVariable(--error, #EB5757); 
-  @include colorVariable(--black2, #1D1D1D);
-  @include colorVariable(--black3, #282828);
-  @include colorVariable(--gray, #333333); 
-  @include colorVariable(--gray2, #4F4F4F); 
-  @include colorVariable(--gray3, #828282); 
-  @include colorVariable(--gray4, #BDBDBD); 
-  @include colorVariable(--gray5, #E0E0E0); 
-  @include colorVariable(--paragraph, #828282); 
+  @include colorVariable(--error, #EB5757 , 5); 
+  @include colorVariable(--black2, #1D1D1D , 5);
+  @include colorVariable(--black3, #282828 , 5);
+  @include colorVariable(--gray, #333333 , 5); 
+  @include colorVariable(--gray2, #4F4F4F , 5); 
+  @include colorVariable(--gray3, #828282 , 5); 
+  @include colorVariable(--gray4, #BDBDBD , 5); 
+  @include colorVariable(--gray5, #E0E0E0 , 5); 
+  @include colorVariable(--paragraph, #828282 , 5); 
+
+  // home two color
+  @include colorVariable (--two-header-color, #142E3E , 5);   
+  @include colorVariable (--two-section, #082334 , 5);   
+
 } 
 
 .primary-text{
@@ -90,4 +95,7 @@
 }
 .gray-text{
   color: hsl(var(--gray));
+} 
+.gray3-text{
+  color: hsl(var(--gray3));
 } 
