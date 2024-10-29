@@ -1,0 +1,91 @@
+/* ============================
+    01.02 navbar css 
+=============================== */
+
+.navbar-home-one {
+    background: none;
+    width: 100%;
+    position: absolute;
+    top: 75px;
+    @media (max-width: 991.98px){
+        background: hsl(var(--white));
+        top: 0;
+    }
+    
+    .navbar-brand{
+        margin-top: 25px;
+        @media (max-width: 991.98px){
+            margin-top: 0;
+        }
+    }
+    .navbar {
+        background: hsl(var(--white));
+        padding: 0;
+        padding-left: 30px;
+        @media (max-width: 991.98px){
+            padding: 20px 0;
+        }
+        .btn-close,
+        .navbar-toggler{
+            border: 0;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-nav { 
+            gap: 25px;
+            @media (max-width: 991.98px){
+                order: 1;
+                gap: 5px;
+            }
+
+            li {
+                a {
+                    color: hsl(var(--gray3));
+                    font-size: 16px;
+                    transition: all .3s linear;
+                    font-weight: 600;
+                    padding-left: 0;
+                    padding-right: 0; 
+                    &:hover {
+                        color: hsl(var(--primary));
+                    }
+                }
+            }
+        }
+    }
+
+    .right-nav {
+        display: flex;
+        gap: 30px;
+        padding-left: 10px;
+        @media (max-width: 991.98px){
+            display: none;
+        }
+    }
+
+    .btn-search {
+        background: none;
+        border: 0;
+        color: hsl(var(--gray3));
+        font-size: 16px;
+    }
+
+    .btn-book {
+        background: hsl(var(--primary));
+        color: hsl(var(--white));
+        font-size: 20px;
+        font-weight: 700;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media (max-width: 1199.98px){
+            font-size: 16px;
+            padding: 35px 15px;
+        }
+        @media (max-width: 991.98px){
+            padding: 25px;
+        }
+    }
+}

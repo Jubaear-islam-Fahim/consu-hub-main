@@ -1,0 +1,96 @@
+/* ============================
+    02.13 contact-info css
+=============================== */
+.contact-info-area {
+    background-image: url("../images/home-one/contact-info-bg.jpg");
+    @include bgp;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(19, 24, 57, 0.70);
+        z-index: -1;
+    }
+
+    .contact-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: hsl(var(--primary));
+        align-items: center;
+
+        .left-contact,
+        .right-contact {
+            padding: 100px 40px;
+        }
+
+        .right-contact {
+            background: hsl(var(--white));
+        }
+    }
+
+    .contact-address {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 24px;
+        
+
+        .icon {
+            margin-top: 10px;
+        }
+
+        .content {
+            .fs-20 {
+                color: hsl(var(--white));
+            }
+
+            p {
+                font-size: 16px;
+                color: hsl(var(--gray5));
+                max-width: 268px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .contact-from {
+        display: grid;
+        gap: 24px;
+        label {
+            color: hsl(var(--gray3));
+            font-size: 16px;
+            font-weight: 600;
+        }
+        textarea,
+        input {
+            border-radius: 4px;
+            border: 1px solid rgba(19, 24, 57, 0.13); 
+            font-family: "Inter";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400; 
+            outline: none;
+            box-shadow: none; 
+            width: 100%;
+            padding: 12px 17px;
+
+            &::placeholder {
+                color: rgba(85, 85, 85, 0.62);
+            } 
+        }
+        textarea{
+            height: 100px;
+            padding-top: 10px;
+        }
+        .btn-consultation{
+            @include btn-min;
+            background: hsl(var(--primary));
+            width: 100%;
+        }
+    }
+}

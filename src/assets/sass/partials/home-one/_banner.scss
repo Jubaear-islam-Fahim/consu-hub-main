@@ -1,0 +1,58 @@
+/* ============================
+    01.03 banner css 
+=============================== */
+.banner-area {
+    background-image: url('../images/banner.jpg');
+    @include bgp;
+    padding-top: 90px;
+}
+
+.banner-content {
+    padding: 120px 0 130px;
+    h1 {
+        font-size: 75px; 
+        font-weight: 700;
+        line-height: 85px;
+        max-width: 634px;
+    }
+
+    p {
+        max-width: 436px;
+        color: #E8E8E9;
+        padding-top: 20px;
+    }
+    .banner-btn{
+        display: flex;
+        gap: 25px;
+        padding: 40px 0;
+    }
+    .btn-service{
+        @include btn-min;
+        background: hsl(var(--primary));
+    }
+    .btn-started{
+        @include btn-min;
+    }
+    .client-review{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        .client-img{
+            padding-left: 10px; 
+            padding-right: 10px;
+            button,
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 100px;
+                border: 2px solid #2F3235;
+                margin: 0 -10px;
+            } 
+            button{
+                background: #373C3F;
+                color: hsl(var(--white));
+            }
+        }
+    }
+}

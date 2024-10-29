@@ -1,0 +1,69 @@
+/* ============================
+    02.11 client-feedback css
+=============================== */
+.client-feedback-area {
+    background-image: url("../images/home-one/feedback-bg.jpg");
+    @include bgp;
+    overflow-x: hidden;
+
+    .feedback-slide{
+        margin-top: 60px;
+    }
+    .feedback-item {
+        border-radius: 12px;
+        background: #203644;
+        padding: 50px;
+
+        p {
+            color: var(--gray4);
+            font-family: "Fraunces";
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 45px;
+            margin: 30px 0;
+        }
+        .feedback-admin{
+            position: relative;
+            padding-left: 45px; 
+            &::before{
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 0;
+                width: 30px;
+                height: 1px;
+                background: var(--primary);
+            }
+            .feedback-name{
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--white);
+            }
+            .feedback-company{
+                font-size: 16px;
+                color: var(--gray4);
+                padding-top: 5px;
+            }
+        }
+    }
+
+    .owl-stage-outer {
+        margin-right: -2000px !important;
+    }
+
+    .arrow-btn-group {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 20px;
+
+        button {
+            width: 56px;
+            height: 56px;
+            color: var(--gray3);
+            background: #203644;
+            border-radius: 5px;
+            font-size: 25px;
+        }
+    }
+}

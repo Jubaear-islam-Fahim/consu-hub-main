@@ -1,0 +1,119 @@
+/* ============================
+    02.01 header css 
+=============================== */
+.home-one-header {
+    background: hsl(var(--black2));
+    @media (max-width: 991.98px){
+        display: none;
+    }
+}
+
+.header-addres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left-adders {
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        &::before {
+            width: 93%;
+            height: 24px;
+            background: hsl(var(--primary));
+            bottom: -24px;
+            left: 0; 
+            z-index: 11;
+            clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+        }
+
+        &::after {
+            width: 38px;
+            height: 24px;
+            background: #0349C9;
+            bottom: -24px;
+            right: 18px;
+            z-index: 1;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+        }
+
+        .top-adders-contents {
+            display: flex;
+            align-items: center;
+            background: hsl(var(--primary));
+            padding: 24px 80px 0 30px;
+            gap: 40px;
+            position: relative; 
+            clip-path: polygon(0 0, 100% 0, 93% 100%, 0 100%);
+
+        }
+
+        .adders-content {
+            display: flex;
+            gap: 10px;
+
+            i {
+                background: hsl(var(--info));
+                width: 50px;
+                height: 50px;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: hsl(var(--white));
+            }
+        }
+    }
+
+    .left-right {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        a {
+            background: hsl(var(--gray2));
+            width: 30px;
+            height: 30px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray3);
+            transition: all .2s linear;
+            font-size: 12px;
+
+            &:hover {
+                background: hsl(var(--primary));
+                color: hsl(var(--white));
+                font-size: 14px;
+            }
+        }
+    }
+
+    .language-btn {
+        button {
+            background: none;
+            border: 0;
+            color: hsl(var(--gray4));
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+
+        }
+    }
+}

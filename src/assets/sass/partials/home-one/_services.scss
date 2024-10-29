@@ -1,0 +1,59 @@
+/* ============================
+    02.07 services css
+=============================== */
+.services-area{ 
+    background-image: url('../images/home-one/services-bg.png');
+    @include bgp;
+    .services-content{
+        margin-top: 60px;
+    }
+    .services-item{ 
+        border-radius: 15px;
+        background: hsl(var(--white));
+        box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+        padding: 50px 30px;
+        transition: all .2s linear;
+        &:hover{
+            background: hsl(var(--primary));
+            .icon {
+                svg{
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(129deg) brightness(160%) contrast(103%);
+                }
+            }
+            button{
+                img{
+                    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(129deg) brightness(160%) contrast(103%);
+                }
+            }
+            h5, p{
+                color: hsl(var(--white)) !important; 
+            }
+        } 
+        .icon{
+            margin: 0 auto;
+            text-align: center;
+            svg{
+                margin: 0 auto;
+            }
+        }
+        .content{
+            text-align: center;
+
+            h5{
+                font-family: "Inter";
+                font-size: 20px;
+                padding: 18px 0 15px;
+                color: hsl(var(--secondary));
+            }
+            p{
+              color: hsl(var(--gray3));  
+              font-weight: 400;
+            }
+            button{
+                background: none;
+                margin-top: 30px;
+
+            }
+        }
+    }
+}

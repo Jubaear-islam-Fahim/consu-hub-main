@@ -1,0 +1,83 @@
+/* ============================
+    02.06 why-choose css
+=============================== */
+.why-choose-area {
+    background-image: url("../images/home-one/choose-shape.png");
+    @include bgp;
+    .why-choose-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+
+        .why-choose-item {
+            border-radius: 10px;
+            background: hsl(var(--white));
+            box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.10);
+            display: flex;
+            align-items: start;
+            padding: 24px;
+            gap: 14px;
+           
+
+            .icon {
+                background: rgba(0, 0, 0, 0.10);
+                width: 95px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+            }
+            .content{
+                .fs-20{
+                    color: hsl(var(--secondary));
+                }
+                p{
+                    color: hsl(var(--gray3));
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+.text-slider {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 1; 
+    background-image: url("../images/home-one/scor-bg.png");
+    @include bgp;
+    padding: 16px 0;
+    margin: -16px 0;
+    
+    &::before,&::after{
+        content: '';
+        position: absolute; 
+        width: 100%; 
+        height: 20px;
+        background: var(--black);
+        z-index: -1;
+        transform: rotate(2deg);
+    } 
+    #text-roller {
+        position: relative;
+        background: hsl(var(--primary));
+        color: rgba(255, 255, 255, 0.60);
+        white-space: nowrap; 
+        -webkit-text-stroke-color: rgba(255, 255, 255, 0.60);
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 145px;
+        line-height: 1.1;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 20px 0;  
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+

@@ -1,0 +1,68 @@
+/* ============================
+    02.08 team css
+=============================== */
+.team-arae{
+    background: #F8F8F8;
+    .team-slide{
+        margin-top: 40px;
+    }
+    .team-item{
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        background: hsl(var(--white));
+        padding: 50px 30px;
+        text-align: center;
+        transition: all .2s ease-in-out;
+        &:hover{
+            background: hsl(var(--primary));
+            .fs-20, p{
+                color: hsl(var(--white)) !important;
+            }
+            .social-links{
+                a{
+                    background: hsl(var(--white));
+                }
+            }
+        }
+        .image{
+            img{
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+            }
+        }
+        .content{
+            padding-top: 24px;
+            .fs-20{
+                color: hsl(var(--secondary));
+            }
+            p{
+                font-size: 16px; 
+                padding: 5px 0 10px;
+            }
+        }
+        .social-links{
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+
+            a{
+                font-size: 14px;
+                color: hsl(var(--secondary));
+                transition: color 0.3s linear;
+                width:35px;
+                height:35px;
+                background: rgba(33, 38, 68, 0.06);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                font-size: 15px;
+                &:hover{
+                    background: hsl(var(--white));
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+/* ============================
+    02.12 blog css
+=============================== */
+.blog-area{
+    .blog-content{
+        display: grid;
+        
+    }
+    .section-title{
+        padding-bottom: 0px; 
+        p{
+            color: hsl(var(--gray3));
+            padding: 10px 0 20px;
+        }
+        .btn-blog-post{
+            @include btn-min;
+            display: inline-block;
+            background: hsl(var(--primary)); 
+        }
+    }
+    
+    .blog-item{
+        // background: var(--white);
+        // padding: 5px;
+        border-radius: 10px;
+        position: relative; 
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            border-radius: 12px;
+            background: linear-gradient(179deg, rgba(255, 255, 255, 0.00) 35.36%, rgba(0, 15, 92, 0.50) 72.28%);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+        }
+
+        
+        .blog-img{
+            img{
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .blog-content{
+            position: absolute;
+            bottom: 0;
+            padding: 20px;
+            .date{
+                background: hsl(var(--primary));
+                padding: 5px 8px;
+                display: inline-block;
+                color: hsl(var(--white));
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                width: 100px;
+                text-align: center;
+            }
+            h6{
+                font-size: 20px;
+                font-weight: 700;
+                color: hsl(var(--white));
+                font-family: "Inter";
+                line-height: 26px;
+            }
+        }
+    }
+}

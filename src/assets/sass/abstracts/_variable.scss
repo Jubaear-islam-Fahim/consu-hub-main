@@ -1,0 +1,93 @@
+/* ============================
+    01.01 Variables css 
+=============================== */
+
+/* ======== Google Fonts ========== */
+// Google fonts Fraunces
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+// Google fonts Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ 
+:root {
+  /* Font Family */
+  --heading-font: 'Fraunces', sans-serif;
+  --body-font: 'Inter', sans-serif;
+
+  /* ======= Theme Color Start ======== */ 
+  /* Base Color */
+  @include colorVariable(--primary, #266FF2, 10); 
+  /* Base Two Color */
+  @include colorVariable(--secondary, #000F5C, 10); 
+
+  /* ======== Color Variables Start ========== */
+  // White Color
+  @include colorVariable(--white, #ffffff); 
+  // Body Color
+  @include colorVariable(--body-color, #cccccc); 
+  // heading-color
+  @include colorVariable(--heading-color, #000F5C); 
+  // Black Color
+  @include colorVariable(--black, #000000); 
+  //Border Color
+  @include colorVariable(--border-color, #e0e0e0); 
+  // Section Background
+  @include colorVariable(--section-bg, #f0f8ff);  
+
+  --background-color: #F8F8F8;
+
+  /* =========== Box Shadow Start ============ */
+  // Header Box shadow
+  --header-box-shadow: 0px -1px 15px 3px hsl(var(--black) / 0.3);
+  // Mobile bottom fix menu box shadow
+  --mobile-box-shadow: 0px -1px 5px 0px hsl(var(--black) / 0.92);
+  // Card box shadow
+  --box-shadow: 0px 2px 15px hsl(var(--black) / 0.05); 
+
+  /* =========== Bootstrap Modifier Start ============ */
+  /* Primary Color */
+  @include colorVariable(--primary, #266FF2, 5); 
+  /* Secondary Color */
+  @include colorVariable(--secondary, #000F5C, 5); 
+  /* Success Color */
+  @include colorVariable(--success, #27AE60, 5); 
+  /* Danger Color */
+  @include colorVariable(--danger, #fb4646, 5); 
+  /* Warning Color */
+  @include colorVariable(--warning, #E2B93B, 5); 
+  /* Info Color */
+  @include colorVariable(--info, #024ED8, 5); 
+  @include colorVariable(--error, #EB5757); 
+  @include colorVariable(--black2, #1D1D1D);
+  @include colorVariable(--black3, #282828);
+  @include colorVariable(--gray, #333333); 
+  @include colorVariable(--gray2, #4F4F4F); 
+  @include colorVariable(--gray3, #828282); 
+  @include colorVariable(--gray4, #BDBDBD); 
+  @include colorVariable(--gray5, #E0E0E0); 
+  @include colorVariable(--paragraph, #828282); 
+} 
+
+.primary-text{
+  color: hsl(var(--primary));
+}
+.secondary-text{
+  color: hsl(var(--secondary));
+}
+.info-text{
+  color: hsl(var(--info));
+}
+.warning-text{
+  color: hsl(var(--warning));
+}
+.error-text{
+  color: hsl(var(--error));
+}
+.black-text{
+  color: hsl(var(--black));
+}
+.white-text{
+  color: hsl(var(--white));
+}
+.gray-text{
+  color: hsl(var(--gray));
+} 
