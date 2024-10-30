@@ -160,6 +160,19 @@
   /* ========================================
         text roller
   ======================================== */
+  if ($('.logo__circle__text').length) {
+    const text = document.querySelector(".logo__circle__text p");
+    text.innerHTML = text.innerText
+      .split("")
+      .map(
+        (char, i) => `<span style="transform:rotate(${i * 11.7}deg)">${char}</span>`
+      )
+      .join("");
+  }
+
+  /* ========================================
+        text roller
+  ======================================== */
   // if ($('.').length) { }
 
 

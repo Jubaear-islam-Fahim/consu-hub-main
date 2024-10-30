@@ -5,8 +5,8 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp zip"
+    "start": "gulp", 
+    "build": "gulp zip build --output public"
     
   },
   "repository": {
