@@ -1,0 +1,170 @@
+/* ============================
+    03.15 footer  css 
+=============================== */
+.home-two-footer-area {
+    background-color: hsl(var(--two-section));
+
+
+    .footer-call-to-address {
+        padding: 40px 0;
+
+        .text {
+            .fs-18 {
+                color: hsl(var(--white));
+            }
+
+            a {
+                font-family: "Fraunces";
+                font-size: 32px;
+                font-weight: 700;
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: end;
+            flex-wrap: wrap;
+            gap: 60px;
+        }
+
+        .adders-item {
+            display: flex;
+            gap: 15px;
+
+            .adders-icon {
+                min-width: 60px;
+                height: 60px;
+                border: 1px solid rgba(255, 255, 255, 0.17);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+            }
+
+            .adders-text {
+                .fs-18 {
+                    color: hsl(var(--white));
+                }
+
+                p {
+                    color: hsl(var(--gray4));
+                }
+            }
+        }
+    }
+
+    .footer-wedget-area {
+        background-image: url("../images/home-two/footer-bg.png");
+        @include bgp;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        padding: 70px 0 0;
+
+        .addres-text {
+            p {
+                color: hsl(var(--gary4));
+            }
+
+            .social-list {
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+
+        }
+
+        .wedget-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+
+            .wedget-item {
+                .wedget-title {
+                    color: hsl(var(--white));
+                    font-family: "Inter";
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                }
+
+                .wedget-list {
+                    display: grid;
+                    gap: 15px;
+
+                    a {
+                        position: relative;
+                        font-size: 16px;
+                        font-family: "Inter";
+                        color: hsl(var(--gray5));
+                        padding-left: 20px;
+                        transition: all .3s ease;
+
+                        &:hover {
+                            color: hsl(var(--primary));
+
+                            &:before {
+                                width: 15px;
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            width: 5px;
+                            height: 5px;
+                            background: hsl(var(--primary));
+                            border-radius: 50px;
+                            transition: all .3s ease;
+                        }
+                    }
+
+                }
+
+                .newsletter {
+                    p {
+                        color: hsl(var(--gray4));
+
+                        span {
+                            color: hsl(var(--primary));
+                        }
+                    }
+
+                    form {
+                        position: relative;
+                        margin-top: 20px;
+                        input{
+                            border-radius: 8px;
+                            border: 1px solid rgba(255, 255, 255, 0.10);
+                            background: none;
+                            box-shadow: none;
+                            height: 50px;
+                            width: 100%;
+                            padding: 10px 50px 10px 15px;
+                            color: hsl(var(--white));
+                        }
+                        button{
+                            color: hsl(var(--white));
+                            position: absolute;
+                            right: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
+            border: none;
+            background: none;
+            font-size: 16px;
+            color: hsl(var(--gray5));
+            text-align: center;
+            padding: 24px 0;
+        }
+    }
+
+    
+}

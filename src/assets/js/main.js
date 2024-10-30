@@ -126,6 +126,40 @@
       feedbackSlider.trigger('prev.owl.carousel');
     });
   }
+  /* ========================================
+      feedback slide
+  ======================================== */
+  if ($('.home-tow-feedback-slide').length) {
+    $('.home-tow-feedback-slide').owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      autoplayTimeout: 4000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 2
+        }
+      }
+    });
+    // Custom navigation buttons
+    var feedbackSlider = $('.home-tow-feedback-slide');
+
+    $('.next-button').click(function () {
+      feedbackSlider.trigger('next.owl.carousel');
+    });
+
+    $('.prev-button').click(function () {
+      feedbackSlider.trigger('prev.owl.carousel');
+    });
+  }
 
   /* ========================================
         scroll top
@@ -161,14 +195,17 @@
         text roller
   ======================================== */
   if ($('.logo__circle__text').length) {
-    const text = document.querySelector(".logo__circle__text p");
-    text.innerHTML = text.innerText
-      .split("")
-      .map(
-        (char, i) => `<span style="transform:rotate(${i * 11.7}deg)">${char}</span>`
-      )
-      .join("");
+    document.querySelectorAll('.logo__circle__text').forEach((circleText) => {
+      const textElement = circleText.querySelector("p");
+      if (textElement) {
+        textElement.innerHTML = textElement.innerText
+          .split("")
+          .map((char, i) => `<span style="transform:rotate(${i * 11.7}deg)">${char}</span>`)
+          .join("");
+      }
+    });
   }
+
 
   /* ========================================
         text roller

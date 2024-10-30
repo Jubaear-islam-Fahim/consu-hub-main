@@ -1,7 +1,7 @@
 /* ============================
-    02.08 team css
+    03.10 team css
 =============================== */
-.team-arae{
+.home-two-team-area{
     background: #F8F8F8;
     .team-slide{
         margin-top: 40px;
@@ -9,10 +9,11 @@
     .team-item{
         border-radius: 12px;
         border: 1px solid rgba(0, 0, 0, 0.10);
-        background: hsl(var(--white));
-        padding: 50px 30px;
+        background: hsl(var(--white)); 
         text-align: center;
         transition: all .2s ease-in-out;
+        border-radius: 600px 600px 0px 0px;
+        overflow: hidden;
         &:hover{
             background: hsl(var(--primary));
             .fs-20, p{
@@ -25,10 +26,9 @@
             }
         }
         .image{
-            img{
-                width: 150px;
-                height: 150px;
-                margin: 0 auto;
+            img{ 
+                width: 100%;
+                height: auto;
             }
         }
         .content{

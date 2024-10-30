@@ -1,0 +1,95 @@
+/* ============================
+    03.12 blog css
+=============================== */
+.home-two-blog-area {
+    .blog-content {
+        display: grid;
+
+    }
+
+    .section-title {
+        padding-bottom: 0px;
+
+        p {
+            color: hsl(var(--gray3));
+            padding: 10px 0 20px;
+        }
+
+        .btn-blog-post {
+            @include btn-min;
+            display: inline-block;
+            background: hsl(var(--primary));
+        }
+    }
+
+    .blog-item {
+        border-radius: 16px;
+        background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #FFF 0%, #FFF 100%), #FFF;
+        padding: 15px;
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+        }
+
+        .blog-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            height: 270px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+                transition: all .3s;
+            }
+
+            .add-dt {
+                text-align: center;
+                background: hsl(var(--primary));
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 60px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                .day {
+                    color: hsl(var(--white));
+                    font-family: "Fraunces";
+                    font-size: 32px;
+                    font-weight: 700;
+
+                }
+
+                .month {
+                    background: hsl(var(--secondary));
+                    display: block;
+                    color: hsl(var(--white));
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .blog-content {
+            margin-top: 20px;
+            display: inline-block;
+            .business-btn{
+                background: hsl(var(--primary));
+                border-radius: 5px;
+                color: hsl(var(--white));
+                padding: 0px 8px;
+                display: inline-block;
+            }
+            h6{
+                font-size: 20px;
+                font-weight: 700;
+                font-family: "Inter";
+                color: hsl(var(--secondary));
+                margin-top: 6px;
+            }
+        }
+    }
+}

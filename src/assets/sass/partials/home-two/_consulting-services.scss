@@ -45,10 +45,12 @@
             }
         }
 
-        .logo__subs__label {
+        .logo-circle {
             position: absolute;
             bottom: -45px;
             left: -45px;
+            z-index: 1;
+            
         }
     }
 

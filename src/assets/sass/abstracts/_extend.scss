@@ -106,16 +106,17 @@ hr {
 .circle-log-white{
   background: hsl(var(--white));
   border-radius: 100%;
-  &>span{
-    border: 2px solid hsl(var(--border-color));
-  }
+  padding: 10px;
+   
 }
 .circle-log-primary{
   background: hsl(var(--primary));
   border-radius: 100%;
-  &>span{
-    border: 2px solid hsl(var(--border-color));
+  padding: 10px;
+  p{
+    color: hsl(var(--white));
   }
+  
 }
 .logo__subs { 
   &__label {
@@ -137,6 +138,7 @@ hr {
       display: flex;
       align-items: center;
       justify-content: center;
+      border: 2px solid hsl(var(--border-color));
       img {
         width: rem(70px);
         user-select: none;
