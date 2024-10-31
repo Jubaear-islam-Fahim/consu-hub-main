@@ -1,0 +1,20 @@
+<!-- meta tags and other links -->
+<!-- Header -->
+@@include('../partials/_template-top.html')
+@@include('../partials/_header-top.html')
+@@include('../partials/_header.html')
+<main class="wraper">
+    @@include('../partials/_breadcrumb.html', {
+        "breadcrumbText": "Our latest project",
+        "breadcrumbUl": "Project one"
+    }) 
+
+    
+    @@include('../sections/_all-project.html')  
+    @@include('../partials/home-one/_client-feedback.html') 
+    @@include('../partials/home-one/_pricing.html')  
+
+</main> 
+<!-- Footer -->
+@@include('../partials/_footer.html')
+@@include('../partials/_template-bottom.html')

@@ -14,6 +14,7 @@
       };
     });
   }
+ 
 
   /* ========================================
         text roller
@@ -161,6 +162,7 @@
     });
   }
 
+
   /* ========================================
         scroll top
   ======================================== */
@@ -192,7 +194,7 @@
   }
 
   /* ========================================
-        text roller
+    logo text roller
   ======================================== */
   if ($('.logo__circle__text').length) {
     document.querySelectorAll('.logo__circle__text').forEach((circleText) => {
@@ -205,6 +207,56 @@
       }
     });
   }
+
+  $(document).ready(function () {
+    $('.progress-container').each(function () {
+      const $container = $(this);
+      const canvas = $container.find('.progress-canvas')[0];
+      const ctx = canvas.getContext('2d');
+      const radius = 90; // Radius of the circle
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const total = $container.data(
+        'percentage'); // Get target percentage from data attribute
+      let current = 0; // Current progress
+
+      function drawProgressBar(percent) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+
+        // Draw background circle
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = '#E3EDFF';
+        ctx.fill();
+
+        // Draw progress arc
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, -Math.PI / 2, (2 * Math.PI * percent / 100) - Math
+          .PI / 2);
+        ctx.lineWidth = 15;
+        ctx.strokeStyle = '#266FF2';
+        ctx.lineCap = 'round';
+        ctx.stroke();
+
+        // Draw percentage text
+        ctx.fillStyle = '#000F5C'; // Text color
+        ctx.font = 'bold 35px Inter';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(Math.round(percent) + '%', centerX, centerY);
+      }
+
+      function animateProgress() {
+        if (current <= total) {
+          drawProgressBar(current);
+          current++;
+          requestAnimationFrame(animateProgress);
+        }
+      }
+
+      animateProgress();
+    });
+  });
 
 
   /* ========================================

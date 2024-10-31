@@ -20,6 +20,8 @@
   <!-- Owl Carousel -->
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css/owl.theme.default.css"> 
+  <!-- Slick -->
+  <link rel="stylesheet" href="assets/css/slick.css">
   <!-- custom animation -->
   <link rel="stylesheet" href="assets/css/custom-animation.css">
 
@@ -457,7 +459,7 @@
 </section>
 <!-- =====>> End 03.05 services <<===== 
 =========================== -->
- 
+  
     <!-- ===========================
 =====>> 03.06 your-business <<===== -->
 <section class="home-two-your-business-area py-120">
@@ -666,6 +668,14 @@
 <!-- =====>> End 03.04 project <<===== 
 =========================== -->
  
+    <!-- text slider -->
+<div class="text-slider">   
+    <div class="text-item">
+        <span>Easy, Fast, Safety, No hinder</span>
+        <span>Easy, Fast, Safety, No hinder</span> 
+    </div>
+</div>
+
     <!-- ===========================
 =====>> 03.08 pricing <<===== -->
 <section class="home-two-pricing-area py-120">
@@ -913,24 +923,24 @@
         </div>
         <div class="content">
             <div class="progress-circle-content">
-                <div class="circle-proge">
-                    <div class="circle-proge__inner">
-                      <div class="circle-proge__bar" style="width: 50%;"></div>
-                    </div>
-                    <div class="circle-proge__text">
-                      <p>50%</p>
-                    </div>
-                </div>  
+                <div class="progress-container" data-percentage="50">
+                  <canvas
+                    class="progress-canvas"
+                    width="200"
+                    height="200"
+                  ></canvas>
+                </div>
                 <div class="fs-20">Business grow</div>
             </div>    
             <div class="progress-circle-content">
                 <div class="circle-proge">
-                    <div class="circle-proge__inner">
-                      <div class="circle-proge__bar" style="width: 50%;"></div>
-                    </div>
-                    <div class="circle-proge__text">
-                      <p>95%</p>
-                    </div>
+                  <div class="progress-container" data-percentage="75">
+                    <canvas
+                      class="progress-canvas"
+                      width="200"
+                      height="200"
+                    ></canvas>
+                  </div>
                 </div>  
                 <div class="fs-20">Successful 
                     project</div>
@@ -1433,6 +1443,11 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script> 
     <!-- Owl Carousel -->
     <script src="assets/js/owl.carousel.min.js"></script> 
+    <!-- Slick -->
+    <script src="assets/js/slick.min.js"></script>  
+    <!-- ScrollSmoother -->
+    <script src="assets/js/ScrollSmoother.min.js"></script>  
+    <!-- counter -->
     <script src="assets/js/counter.min.js"></script> 
     <!-- main js -->
     <script src="assets/js/main.js"></script> 

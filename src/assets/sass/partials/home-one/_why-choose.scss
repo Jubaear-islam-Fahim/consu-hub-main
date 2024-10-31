@@ -43,41 +43,6 @@
 }
 
 
-.text-slider {
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    z-index: 1; 
-    background-image: url("../images/home-one/scor-bg.png");
-    @include bgp;
-    padding: 16px 0;
-    margin: -16px 0;
-    
-    &::before,&::after{
-        content: '';
-        position: absolute; 
-        width: 100%; 
-        height: 20px;
-        background: var(--black);
-        z-index: -1;
-        transform: rotate(2deg);
-    } 
-    #text-roller {
-        position: relative;
-        background: hsl(var(--primary));
-        color: rgba(255, 255, 255, 0.60);
-        white-space: nowrap; 
-        -webkit-text-stroke-color: rgba(255, 255, 255, 0.60);
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 145px;
-        line-height: 1.1;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 20px 0;  
-        color: rgba(255, 255, 255, 0.6);
-    }
-}
+
 
 

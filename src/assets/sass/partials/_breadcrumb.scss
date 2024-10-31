@@ -1,0 +1,44 @@
+/* ============================
+    Breadcrumb css 
+=============================== */
+.breadcrumb-area{
+    background-image: url("../images/breadcrumb.jpg");
+    @include bgp; 
+    background-color: hsl(var(--two-section));
+    padding: 170px 0 80px;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(8, 35, 52, 0.849);
+        z-index: -1;
+    }
+    .breadcrumb__wrapper{
+        text-align: center;
+    }
+    .breadcrumb__title{
+        margin-bottom: 10px;
+        color: hsl(var(--white));
+        font-size: rem(48px);
+    }
+    .breadcrumb__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        a{
+            color: hsl(var(--white));
+        }
+        span{
+            color: hsl(var(--primary));
+        }
+    }
+}

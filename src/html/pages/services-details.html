@@ -1,0 +1,138 @@
+<!-- meta tags and other links -->
+<!-- Header -->
+@@include('../partials/_template-top.html')
+@@include('../partials/_header-top.html') @@include('../partials/_header.html')
+<main class="wraper">
+  @@include('../partials/_breadcrumb.html', { 
+    "breadcrumbText": "Services Details", "breadcrumbUl": "Services" 
+    })
+
+  <!-- ===========================
+    =====>> Services Details <<===== -->
+  <div class="services-details-area py-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="services-details__category">
+            <img
+              src="assets/images/services-details.jpg"
+              alt="Category Image"
+              class="w-100"
+            />
+            <h2 class="category__title">Business strategy</h2>
+            <p>
+              Need something changed or is there something not quite working the
+              way you envisaged? Is your van a little old and tired and need
+              refreshing? Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's standard
+              dummy printer took a galley of type and scrambled lacinia dui
+              faucibus vestibulum. Praesent vel commodo libero. Sed ut tempus
+              lorem, fermentum auctor velit. Nulla facilisi. Quisqeque enim,
+              feugiat sed massa ac, dignissim auctor mauris. Nunc elementum
+              sapien ac nisi aliquam, quis
+            </p>
+            <div class="services-details__content">
+              <div class="services-details__item">
+                <h4>Our Goal</h4>
+                <ul class="goal-list">
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Marketing analysis.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Page Load (time, number of requests).
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Big data analysis.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i>
+                    Lorem analysis something
+                  </li>
+                </ul>
+              </div>
+              <div class="services-details__item">
+                <h4>The Challenge</h4>
+                <p>
+                  Printer took a galley of type and scrambled lacinia dui
+                  faucibus vestibulum. Praesent vel commodo libero. Sed ut
+                  tempus lorem, fermentum auctor velit. Nulla facilisi.
+                  Quisqueque enim, feugiat sed massa ac, dignissim auctor
+                  mauris. Nunc elementum sapien ac nisi aliquam, quis.
+                </p>
+              </div>
+              <div class="progress-card">
+                <div class="progress-container" data-percentage="60">
+                  <canvas
+                    class="progress-canvas"
+                    width="200"
+                    height="200"
+                  ></canvas>
+                </div>
+                <div>
+                  <h4 class="progress-text">Business grow</h4>
+                  <div class="progress-description">
+                    Printer took a galley of type and scrambled lacinia dui
+                    faucibus
+                  </div>
+                </div>
+              </div>
+              <div class="progress-card">
+                <div class="progress-container" data-percentage="55">
+                  <canvas
+                    class="progress-canvas"
+                    width="200"
+                    height="200"
+                  ></canvas>
+                </div>
+                <div>
+                  <h4 class="progress-text">Marketing analysis</h4>
+                  <div class="progress-description">
+                    Printer took a galley of type and scrambled lacinia dui
+                    faucibus
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>
+              Nam luctus iaculis elit eu aliquet. Fusce odio tellus, aliquam nec
+              eleifend et, rutrum eu eros. Ut ac ultrices erat, id tincidunt
+              neque. Suspendisse eu mattis mi, dictum auctor est. Phasellus ut
+              enim nec leo posuere fermentum et id risus. Nulla sagittis viverra
+              dignissim. Vivamus laoreet mi ut diam hendrerit tincidunt.
+              Pellentesque scelerisque odio a massa hendrerit consectetur.
+              Praesent porta vitae nunc et euismod.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="sidebar-content">
+                <div class="search-box">
+                    <form action="#">
+                        <input type="text" placeholder="Search..." />
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="services-details__sidebar">
+                    <h4 class="sidebar__title">Category</h4>
+                    <ul class="sidebar__list">
+                        <li><a href="#">Business strategy</a></li>
+                        <li><a href="#">Constancy & advice</a></li>
+                        <li><a href="#">Plan building</a></li>
+                        <li><a href="#">Investment planning</a></li>
+                        <li><a href="#">Business analysis</a></li>
+                    </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- =====>> End Services Details <<===== 
+    =========================== -->
+</main>
+<!-- Footer -->
+@@include('../partials/_footer.html')
+@@include('../partials/_template-bottom.html')
